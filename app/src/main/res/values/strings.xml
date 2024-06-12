@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UNTmapDemo</string>
+    <string name="about_us3">About Us</string>
+    <string name="back">Back</string>
+    <string name="start">Start</string>
+    <string name="selectStart">Pick Starting Building</string>
+    <string name="exit">Exit</string>
+    <string name="demo_direction">Left 3</string>
+    <string name="calculating">Calculating</string>
+    // DEBUG: Delete me later
+    <string name="about_us2">&quot;Our mission is to bring peace to the minds of lost UNT students  Our goal is to devlop an Android app to help with this crisis.  One step for man is another step for a UNT student.&quot; - Du, Some Random Asian Guy</string>
+
+</resources>
