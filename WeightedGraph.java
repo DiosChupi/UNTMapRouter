@@ -2,44 +2,44 @@ import java.util.*;
 
 // Node class covering buildings and interections
 class Node {
-    private String name;
+    private String name; // Name of building or intersection
 
-    public Node(String name) {
+    public Node(String name) { // Constructor that initializes name
         this.name = name;
     }
 
-    public String getName() {
+    public String getName() { // Retriever To get name
         return name;
     }
 }
 
 // Edge class covering roads with distance, direction, and linked location.
 class Edge {
-    private Node from;
-    private Node to;
-    private double weight;
-    private String direction;
+    private Node from; // Start of road segment
+    private Node to; // End of road segment
+    private double weight; // Length of road segment in miles
+    private String direction; // Cardinal direction the road travels in (NEED 2 Segments)
 
-    public Edge(Node from, Node to, double weight, String direction) {
+    public Edge(Node from, Node to, double weight, String direction) { // Constructor to build road
         this.from = from;
         this.to = to;
         this.weight = weight;
         this.direction = direction;
     }
 
-    public Node getFrom() {
+    public Node getFrom() { // Retriever to get from destination
         return from;
     }
 
-    public Node getTo() {
+    public Node getTo() { // Retriever to get to destination
         return to;
     }
 
-    public double getWeight() {
+    public double getWeight() { // Retriever to get length of road
         return weight;
     }
 
-    public String getDirection() {
+    public String getDirection() { // Retriever to get direction
         return direction;
     }
 }
