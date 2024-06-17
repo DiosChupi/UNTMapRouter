@@ -7,7 +7,7 @@
     <string name="exit">Exit</string>
     <string name="demo_direction">Left 3</string>
     <string name="calculating">Calculating</string>
-    // DEBUG: Delete me later
-    <string name="about_us2">&quot;Our mission is to bring peace to the minds of lost UNT students  Our goal is to devlop an Android app to help with this crisis.  One step for man is another step for a UNT student.&quot; - Du, Some Random Asian Guy</string>
-
+    <!-- DEBUG: Delete me later -->
+    <string name="about_us2">&quot;Our mission is to bring peace to the minds of lost UNT students. Our goal is to develop an Android app to help with this crisis. One step for man is another step for a UNT student.&quot; - Du, Some Random Asian Guy</string>
+    <string name="start_location_hint">Start location input field</string>
 </resources>
