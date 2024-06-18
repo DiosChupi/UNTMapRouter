@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UNTMapRouter</string>
+    <string name="start">Start</string>
+    <string name="back">Back</string>
+    <string name="about_us">About Us</string>
+    <string name="calculating">Calculate</string>
+</resources>
