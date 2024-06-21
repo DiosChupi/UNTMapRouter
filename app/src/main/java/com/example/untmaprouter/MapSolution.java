@@ -81,6 +81,7 @@ public class MapSolution extends AppCompatActivity {
         else if (receivedDest.equals("15 Terrill Hall")) dest = 15;
 
         // IMPORTANT: Put your int main() code here
+        /*
         Graph graph = new Graph();
 
         // Creating nodes (intersections or buildings)
@@ -124,7 +125,12 @@ public class MapSolution extends AppCompatActivity {
             for (String direction : path)
                 total = total + direction + "\n";
             src3.setText("Shortest path from " + nodeE.getName() + " to " + nodeA.getName() + ":\n" + total);
-
         }
+        */
+
+        // Du Brute Force Method for Map Solution
+        // Comment or remove this when get algorithm done
+        Dummy emergency = new Dummy(src, dest);
+        src3.setText("From: " + receivedSrc + "\nTo: " + receivedDest + "\n\n" + emergency.BruteForce());
     }
 }
