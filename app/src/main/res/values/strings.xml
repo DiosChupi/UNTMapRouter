@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UNTMapRouter</string>
+    <string name="placeholder">PLACEHOLDER</string>
+    <string name="start">Start</string>
+    <string name="back">Back</string>
+    <string name="src_hint">Select a source</string>
+    <string name="dest_hint">Select a destination</string>
+    <string name="about_us_button">About Us</string>
+    <string name="calculate_button">Calculating Route</string>
+    <string name="about_title">About Our App: UNT Map Route</string>
+    <string name="about_intro">Welcome to UNT Map Route App, a navigating system for students at UNT. Developed by a team of 5 students who are trying to simplify how one travels around UNT.</string>
+    <string name="about_memberinfo">Meet Our Team:\n\nTrung Du: Asian Wizard, enchanting users and teammates with his coding knowledge\n\nAndres Montoyo: Pokemon Trainer, fearlessly tracks down and captures bugs before they can cause mischief and enless hours of pain\n\nNathaniel Schimpf: Starwars Jedi, with magical hands craft lines of code to bring the app to life\n\nSain Madrigal: Coding Ninja, gathers insights and feedback to help team improve the app\n\nKoffi Amematekpo: Data Paladin, defends the code realm to dazzle users and bring joy to their navigation experience thru accessibility and usabilty</string>
+</resources>
