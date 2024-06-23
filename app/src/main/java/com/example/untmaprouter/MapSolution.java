@@ -80,16 +80,35 @@ public class MapSolution extends AppCompatActivity {
         else if (receivedDest.equals("14 Sycamore Hall")) dest = 14;
         else if (receivedDest.equals("15 Terrill Hall")) dest = 15;
 
-        // IMPORTANT: Put your int main() code here
-        /*
         Graph graph = new Graph();
 
         // Creating nodes (intersections or buildings)
-        Node nodeA = new Node("Chemistry Bldg");
+        Node nodeA = new Node("03 Chemistry");
         Node nodeB = new Node("Mulbury/Sycamore Intersection");
-        Node nodeC = new Node("Science Research");
+        Node nodeC = new Node("13 Science Research Building");
         Node nodeD = new Node("Mulbury/GAB Intersection");
-        Node nodeE = new Node("GAB");
+        Node nodeE = new Node("05 General Academic Building");
+        Node nodeF = new Node("15 Terrill Hall");
+        Node nodeG = new Node("09 Marquis Hall");
+        Node nodeH = new Node("14 Sycamore Hall");
+        Node nodeI = new Node("Biology building");
+        Node nodeJ = new Node("12 Sage Hall");
+        Node nodeK = new Node("11 Radio, TV, Film and Performing Arts");
+        Node nodeL = new Node("04 Curry Hall");
+        Node nodeM = new Node("01 Art Building");
+        Node nodeN = new Node("10 Physics Building");
+        Node nodeO = new Node("07 Language Building");
+        Node nodeP = new Node("International Affairs Pathways");
+        Node nodeQ = new Node("06 Hickory Hall");
+        Node nodeR = new Node("Sycamore Hall Pathways");
+        Node nodeS = new Node("South East GAB Pathways");
+        Node nodeT = new Node("Sage Hall Pathways");
+        Node nodeU = new Node("English Department");
+        Node nodeV = new Node("Curry Hall Pathways");
+        Node nodeW = new Node("Visual Arts Pathways");
+        Node nodeY = new Node("02 Auditorium");
+        Node nodeX = new Node("08 Life Science Complex");
+
 
         // Adding nodes to the graph
         graph.addNode(nodeA);
@@ -97,40 +116,137 @@ public class MapSolution extends AppCompatActivity {
         graph.addNode(nodeC);
         graph.addNode(nodeD);
         graph.addNode(nodeE);
+        graph.addNode(nodeF);
+        graph.addNode(nodeG);
+        graph.addNode(nodeH);
+        graph.addNode(nodeI);
+        graph.addNode(nodeJ);
+        graph.addNode(nodeK);
+        graph.addNode(nodeL);
+        graph.addNode(nodeM);
+        graph.addNode(nodeN);
+        graph.addNode(nodeO);
+        graph.addNode(nodeP);
+        graph.addNode(nodeQ);
+        graph.addNode(nodeR);
+        graph.addNode(nodeS);
+        graph.addNode(nodeT);
+        graph.addNode(nodeU);
+        graph.addNode(nodeV);
+        graph.addNode(nodeW);
+        graph.addNode(nodeY);
+        graph.addNode(nodeX);
 
         // Adding edges (roads) with weights (lengths in miles) and directions
+        // CHEM TO MUL
         graph.addEdge(nodeA, nodeB, 1.2, "east");
         graph.addEdge(nodeB, nodeA, 1.2, "west");
-
+        // MUL TO SCIENCE
         graph.addEdge(nodeB, nodeC, 2.5, "east");
         graph.addEdge(nodeC, nodeB, 2.5, "west");
-
+        // SCIENCE TO MUL/GAB
         graph.addEdge(nodeC, nodeD, 1.0, "east");
         graph.addEdge(nodeD, nodeC, 1.0, "west");
-
+        // MUL/GAB TO GAB
         graph.addEdge(nodeD, nodeE, 3.0, "south");
         graph.addEdge(nodeE, nodeD, 3.0, "north");
+        // MUL/GAB TO INT AFFAIRS
+        graph.addEdge(nodeD, nodeG, 3.0, "south");
+        graph.addEdge(nodeG, nodeD, 3.0, "north");
+        // MUL TO LIBERAL ARTS
+        graph.addEdge(nodeB, nodeF, 3.0, "south");
+        graph.addEdge(nodeF, nodeB, 3.0, "north");
+        // GAB TO INT AFFAIRS PATHWAYS
+        graph.addEdge(nodeE, nodeP, 3.0, "south");
+        graph.addEdge(nodeP, nodeE, 3.0, "north");
+        // INT AFFAIRS PATHWAYS TO LIBERAL ARTS
+        graph.addEdge(nodeF, nodeP, 1.0, "east");
+        graph.addEdge(nodeP, nodeF, 1.0, "west");
+        // MUL/GAB TO HICKORY
+        graph.addEdge(nodeD, nodeQ, 1.0, "east");
+        graph.addEdge(nodeQ, nodeD, 1.0, "west");
+        // INT AFFAIRS PATHWAYS TO SYC HALL PATHWAYS
+        graph.addEdge(nodeP, nodeR, 3.0, "south");
+        graph.addEdge(nodeR, nodeP, 3.0, "north");
+        // SYC HALL PATHWAYS TO SYC HALL
+        graph.addEdge(nodeR, nodeH, 3.0, "south");
+        graph.addEdge(nodeH, nodeR, 3.0, "north");
+        // SYC HALL TO BIO
+        graph.addEdge(nodeH, nodeI, 3.0, "south");
+        graph.addEdge(nodeI, nodeH, 3.0, "north");
+        // SYC HALL PATHWAYS TO SE GAB PATHWAYS
+        graph.addEdge(nodeR, nodeS, 3.0, "east");
+        graph.addEdge(nodeS, nodeR, 3.0, "west");
+        // SYC HALL TO BIO
+        graph.addEdge(nodeH, nodeI, 3.0, "south");
+        graph.addEdge(nodeI, nodeH, 3.0, "north");
+
+        graph.addEdge(nodeQ, nodeU, 2.0, "east");
+        graph.addEdge(nodeU, nodeQ, 2.0, "west");
+
+        graph.addEdge(nodeS, nodeJ, 4.0, "south");
+        graph.addEdge(nodeJ, nodeS, 4.0, "north");
+
+        graph.addEdge(nodeS, nodeT, 3.0, "east");
+        graph.addEdge(nodeT, nodeS, 3.0, "west");
+
+        graph.addEdge(nodeT, nodeK, 1.5, "south");
+        graph.addEdge(nodeK, nodeT, 1.5, "north");
+
+        graph.addEdge(nodeT, nodeM, 2.5, "north");
+        graph.addEdge(nodeM, nodeT, 2.5, "south");
+
+        graph.addEdge(nodeM, nodeN, 3.0, "north");
+        graph.addEdge(nodeN, nodeM, 3.0, "south");
+
+        graph.addEdge(nodeN, nodeW, 2.0, "north");
+        graph.addEdge(nodeW, nodeN, 2.0, "south");
+
+        graph.addEdge(nodeW, nodeO, 1.0, "west");
+        graph.addEdge(nodeO, nodeW, 1.0, "east");
+
+        graph.addEdge(nodeO, nodeV, 2.5, "west");
+        graph.addEdge(nodeV, nodeO, 2.5, "east");
+
+        graph.addEdge(nodeV, nodeU, 3.0, "north");
+        graph.addEdge(nodeU, nodeV, 3.0, "south");
+
+        graph.addEdge(nodeQ, nodeU, 2.0, "east");
+        graph.addEdge(nodeU, nodeQ, 2.0, "west");
+
+        graph.addEdge(nodeV, nodeL, 1.5, "south");
+        graph.addEdge(nodeL, nodeV, 1.5, "north");
+
+        graph.addEdge(nodeV, nodeY, 2.0, "east");
+        graph.addEdge(nodeY, nodeV, 2.0, "west");
+
+        graph.addEdge(nodeX, nodeH, 2.0, "west");
+        graph.addEdge(nodeH, nodeX, 2.0, "east");
 
 
-        // Running Dijkstra's algorithm to test
-        List<String> path = graph.dijkstra(nodeE, nodeA);
+        Node src = graph.getNodeByName(receivedSrc);
+        Node dest = graph.getNodeByName(receivedDest);
 
-        // Output the directions
-        // Note: I needed to change the way to output the results because has to be in concat string format
-        if (path.isEmpty()) {
-            // System.out.println("No path found from " + nodeE.getName() + " to " + nodeA.getName());
-            src3.setText("No path found from " + nodeE.getName() + " to " + nodeA.getName());
+        if (src == null || dest == null) {
+            src3.setText("Invalid source or destination");
         } else {
-            String total = "";
-            for (String direction : path)
-                total = total + direction + "\n";
-            src3.setText("Shortest path from " + nodeE.getName() + " to " + nodeA.getName() + ":\n" + total);
+            // Running Dijkstra's algorithm to find the shortest path
+            List<String> path = graph.dijkstra(src, dest);
+
+            if (path.isEmpty()) {
+                src3.setText("No path found from " + src.getName() + " to " + dest.getName());
+            } else {
+                String total = "";
+                for (String direction : path) {
+                    total = total + direction + "\n";
+                }
+                src3.setText("Shortest path from " + src.getName() + " to " + dest.getName() + ":\n" + total);
+            }
         }
-        */
 
         // Du Brute Force Method for Map Solution
         // Comment or remove this when get algorithm done
-        Dummy emergency = new Dummy(src, dest);
-        src3.setText("From: " + receivedSrc + "\nTo: " + receivedDest + "\n\n" + emergency.BruteForce());
+        //Dummy emergency = new Dummy(src, dest);
+        //src3.setText("From: " + receivedSrc + "\nTo: " + receivedDest + "\n\n" + emergency.BruteForce());
     }
 }
