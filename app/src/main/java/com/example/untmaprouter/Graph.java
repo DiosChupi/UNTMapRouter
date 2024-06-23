@@ -2,7 +2,6 @@ package com.example.untmaprouter;
 
 import java.util.*;
 
-// Teammates algorithm, I just separated into a external class so need public keyword
 public class Graph {
     private Map<Node, List<Edge>> adjList;
 
@@ -20,6 +19,15 @@ public class Graph {
 
     public Map<Node, List<Edge>> getAdjList() {
         return adjList;
+    }
+
+    public Node getNodeByName(String name) {
+        for (Node node : adjList.keySet()) {
+            if (node.getName().equals(name)) {
+                return node;
+            }
+        }
+        return null;
     }
 
     public List<String> dijkstra(Node start, Node end) {
@@ -72,5 +80,4 @@ public class Graph {
         Collections.reverse(path);
         return path.size() == 1 && !path.contains(start.getName()) ? new ArrayList<>() : path;
     }
-
 }
