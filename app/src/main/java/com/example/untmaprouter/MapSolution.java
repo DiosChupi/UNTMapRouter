@@ -15,8 +15,8 @@ import java.util.*;
 
 public class MapSolution extends AppCompatActivity {
     Button backMap;
-    public int src = -1,dest = -1;                  // IMPORTANT: Du's global variable from previous page
-    private TextView src3;                          // Area to output your System.out.ln in Android Studio Style
+    public int srcPrevPage = -1, destPrevPage = -1;             // IMPORTANT: Du's global variable from previous page
+    private TextView src3;                                      // Area to output your System.out.ln in Android Studio Style
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class MapSolution extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MapSolution.this, Navigation.class);
                 startActivity(intent);
-                finish();                               // prevents back button
+                finish();                                   // prevents back button
             }
         });
 
@@ -47,38 +47,68 @@ public class MapSolution extends AppCompatActivity {
         String receivedDest = getIntent().getStringExtra("keydest");
 
         // Converting the string source into and int from 1 to 15
-        if (receivedSrc.equals("01 Art Building")) src = 1;
-        else if (receivedSrc.equals("02 Auditorium")) src = 2;
-        else if (receivedSrc.equals("03 Chemistry")) src = 3;
-        else if (receivedSrc.equals("04 Curry Hall")) src = 4;
-        else if (receivedSrc.equals("05 General Academic Building")) src = 5;
-        else if (receivedSrc.equals("06 Hickory Hall")) src = 6;
-        else if (receivedSrc.equals("07 Language Building")) src = 7;
-        else if (receivedSrc.equals("08 Life Science Complex")) src = 8;
-        else if (receivedSrc.equals("09 Marquis Hall")) src = 9;
-        else if (receivedSrc.equals("10 Physics Building")) src = 10;
-        else if (receivedSrc.equals("11 Radio, TV, Film and Performing Arts")) src = 11;
-        else if (receivedSrc.equals("12 Sage Hall")) src = 12;
-        else if (receivedSrc.equals("13 Science Research Building")) src = 13;
-        else if (receivedSrc.equals("14 Sycamore Hall")) src = 14;
-        else if (receivedSrc.equals("15 Terrill Hall")) src = 15;
+        if (receivedSrc.equals("01 Art Building")) srcPrevPage = 1;
+        else if (receivedSrc.equals("02 Auditorium")) srcPrevPage = 2;
+        else if (receivedSrc.equals("03 Chemistry")) srcPrevPage = 3;
+        else if (receivedSrc.equals("04 Curry Hall")) srcPrevPage = 4;
+        else if (receivedSrc.equals("05 General Academic Building")) srcPrevPage = 5;
+        else if (receivedSrc.equals("06 Hickory Hall")) srcPrevPage = 6;
+        else if (receivedSrc.equals("07 Language Building")) srcPrevPage = 7;
+        else if (receivedSrc.equals("08 Life Science Complex")) srcPrevPage = 8;
+        else if (receivedSrc.equals("09 Marquis Hall")) srcPrevPage = 9;
+        else if (receivedSrc.equals("10 Physics Building")) srcPrevPage = 10;
+        else if (receivedSrc.equals("11 Radio, TV, Film and Performing Arts")) srcPrevPage = 11;
+        else if (receivedSrc.equals("12 Sage Hall")) srcPrevPage = 12;
+        else if (receivedSrc.equals("13 Science Research Building")) srcPrevPage = 13;
+        else if (receivedSrc.equals("14 Sycamore Hall")) srcPrevPage = 14;
+        else if (receivedSrc.equals("15 Terrill Hall")) srcPrevPage = 15;
+        else if (receivedSrc.equals("16 Bain Hall")) srcPrevPage = 16;
+        else if (receivedSrc.equals("17 Business Leadership Building")) srcPrevPage = 17;
+        else if (receivedSrc.equals("18 Chilton Hall")) srcPrevPage = 18;
+        else if (receivedSrc.equals("19 Eagle Student Center")) srcPrevPage = 19;
+        else if (receivedSrc.equals("20 Environmental Science")) srcPrevPage = 20;
+        else if (receivedSrc.equals("21 Gateway Center")) srcPrevPage = 21;
+        else if (receivedSrc.equals("22 Matthews Hall")) srcPrevPage = 22;
+        else if (receivedSrc.equals("23 McConnell Hall")) srcPrevPage = 23;
+        else if (receivedSrc.equals("24 Music Building")) srcPrevPage = 24;
+        else if (receivedSrc.equals("25 Music Practice Rooms")) srcPrevPage = 25;
+        else if (receivedSrc.equals("26 Physical Education Building")) srcPrevPage = 26;
+        else if (receivedSrc.equals("27 Union")) srcPrevPage = 27;
+        else if (receivedSrc.equals("28 Wooten Hall")) srcPrevPage = 28;
 
         // Converting the string destination into and int from 1 to 15
-        if (receivedDest.equals("01 Art Building")) dest = 1;
-        else if (receivedDest.equals("02 Auditorium")) dest = 2;
-        else if (receivedDest.equals("03 Chemistry")) dest = 3;
-        else if (receivedDest.equals("04 Curry Hall")) dest = 4;
-        else if (receivedDest.equals("05 General Academic Building")) dest = 5;
-        else if (receivedDest.equals("06 Hickory Hall")) dest = 6;
-        else if (receivedDest.equals("07 Language Building")) dest = 7;
-        else if (receivedDest.equals("08 Life Science Complex")) dest = 8;
-        else if (receivedDest.equals("09 Marquis Hall")) dest = 9;
-        else if (receivedDest.equals("10 Physics Building")) dest = 10;
-        else if (receivedDest.equals("11 Radio, TV, Film and Performing Arts")) dest = 11;
-        else if (receivedDest.equals("12 Sage Hall")) dest = 12;
-        else if (receivedDest.equals("13 Science Research Building")) dest = 13;
-        else if (receivedDest.equals("14 Sycamore Hall")) dest = 14;
-        else if (receivedDest.equals("15 Terrill Hall")) dest = 15;
+        if (receivedDest.equals("01 Art Building")) destPrevPage = 1;
+        else if (receivedDest.equals("02 Auditorium")) destPrevPage = 2;
+        else if (receivedDest.equals("03 Chemistry")) destPrevPage = 3;
+        else if (receivedDest.equals("04 Curry Hall")) destPrevPage = 4;
+        else if (receivedDest.equals("05 General Academic Building")) destPrevPage = 5;
+        else if (receivedDest.equals("06 Hickory Hall")) destPrevPage = 6;
+        else if (receivedDest.equals("07 Language Building")) destPrevPage = 7;
+        else if (receivedDest.equals("08 Life Science Complex")) destPrevPage = 8;
+        else if (receivedDest.equals("09 Marquis Hall")) destPrevPage = 9;
+        else if (receivedDest.equals("10 Physics Building")) destPrevPage = 10;
+        else if (receivedDest.equals("11 Radio, TV, Film and Performing Arts")) destPrevPage = 11;
+        else if (receivedDest.equals("12 Sage Hall")) destPrevPage = 12;
+        else if (receivedDest.equals("13 Science Research Building")) destPrevPage = 13;
+        else if (receivedDest.equals("14 Sycamore Hall")) destPrevPage = 14;
+        else if (receivedDest.equals("15 Terrill Hall")) destPrevPage = 15;
+        else if (receivedDest.equals("16 Bain Hall")) destPrevPage = 16;
+        else if (receivedDest.equals("17 Business Leadership Building")) destPrevPage = 17;
+        else if (receivedDest.equals("18 Chilton Hall")) destPrevPage = 18;
+        else if (receivedDest.equals("19 Eagle Student Center")) destPrevPage = 19;
+        else if (receivedDest.equals("20 Environmental Science")) destPrevPage = 20;
+        else if (receivedDest.equals("21 Gateway Center")) destPrevPage = 21;
+        else if (receivedDest.equals("22 Matthews Hall")) destPrevPage = 22;
+        else if (receivedDest.equals("23 McConnell Hall")) destPrevPage = 23;
+        else if (receivedDest.equals("24 Music Building")) destPrevPage = 24;
+        else if (receivedDest.equals("25 Music Practice Rooms")) destPrevPage = 25;
+        else if (receivedDest.equals("26 Physical Education Building")) destPrevPage = 26;
+        else if (receivedDest.equals("27 Union")) destPrevPage = 27;
+        else if (receivedDest.equals("28 Wooten Hall")) destPrevPage = 28;
+
+        // DEBUG: Comment this out went done testing if any syntax errors or typos in src and dest
+        // was trying figure out why src and dest print out addy of a Node and not a int
+        // System.out.printf("src: " + src + "\ndest: " + dest + "\n");
 
         Graph graph = new Graph();
 
@@ -109,7 +139,6 @@ public class MapSolution extends AppCompatActivity {
         Node nodeY = new Node("02 Auditorium");
         Node nodeX = new Node("08 Life Science Complex");
 
-
         // Adding nodes to the graph
         graph.addNode(nodeA);
         graph.addNode(nodeB);
@@ -136,6 +165,12 @@ public class MapSolution extends AppCompatActivity {
         graph.addNode(nodeW);
         graph.addNode(nodeY);
         graph.addNode(nodeX);
+
+        // DEBUG: (Du) prob better if weight in feet, you can get from google map
+        // Can calculate time easily also just figure out how many feet/min person can go
+        // and just divide what total feet is by that ratio
+        // Ex) Total Distance: 200 ft, but a person can walk 100ft/min
+        // 200/100 = takes person 2 min to walk 200 ft
 
         // Adding edges (roads) with weights (lengths in miles) and directions
         // CHEM TO MUL
@@ -223,7 +258,9 @@ public class MapSolution extends AppCompatActivity {
         graph.addEdge(nodeX, nodeH, 2.0, "west");
         graph.addEdge(nodeH, nodeX, 2.0, "east");
 
-
+        // DEBUG: might get errors here later, since class has int src and int dest
+        // using same variable names with different data types, was messing up my System.out.printf
+        // I fixed it can use src and dest as Node class, refactor/renamed other
         Node src = graph.getNodeByName(receivedSrc);
         Node dest = graph.getNodeByName(receivedDest);
 
@@ -245,8 +282,8 @@ public class MapSolution extends AppCompatActivity {
         }
 
         // Du Brute Force Method for Map Solution
-        // Comment or remove this when get algorithm done
-        //Dummy emergency = new Dummy(src, dest);
-        //src3.setText("From: " + receivedSrc + "\nTo: " + receivedDest + "\n\n" + emergency.BruteForce());
+        // Comment or remove this when get algorithm done (leaving this here for learning purposes)
+        // Dummy emergency = new Dummy(src, dest);
+        // src3.setText("From: " + receivedSrc + "\nTo: " + receivedDest + "\n\n" + emergency.BruteForce());
     }
 }
