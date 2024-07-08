@@ -138,6 +138,10 @@ public class MapSolution extends AppCompatActivity {
         Node nodeW = new Node("Visual Arts Pathways");
         Node nodeY = new Node("02 Auditorium");
         Node nodeX = new Node("08 Life Science Complex");
+        // Added Buildings (16-28)
+
+
+
 
         // Adding nodes to the graph
         graph.addNode(nodeA);
