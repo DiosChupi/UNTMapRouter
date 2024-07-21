@@ -1,0 +1,33 @@
+<resources>
+    <string-array name="options_list">
+        <item name="art" type="string">01 Art Building</item>
+        <item name="aud" type="string">02 Auditorium</item>
+        <item name="che" type="string">03 Chemistry</item>
+        <item name="cur" type="string">04 Curry Hall</item>
+        <item name="gab" type="string">05 General Academic Building</item>
+        <item name="hic" type="string">06 Hickory Hall</item>
+        <item name="lan" type="string">07 Language Building</item>
+        <item name="lsc" type="string">08 Life Science Complex</item>
+        <item name="mar" type="string">09 Marquis Hall</item>
+        <item name="phy" type="string">10 Physics Building</item>
+        <item name="rtf" type="string">11 Radio, TV, Film and Performing Arts</item>
+        <item name="sag" type="string">12 Sage Hall</item>
+        <item name="srb" type="string">13 Science Research Building</item>
+        <item name="syc" type="string">14 Sycamore Hall</item>
+        <item name="ter" type="string">15 Terrill Hall</item>
+        <item name="blk1" type="string">- - - - - Expansion (Do not Select) - - - - -</item>
+        <item name="bain" type="string">16 Bain Hall</item>
+        <item name="blb" type="string">17 Business Leadership Building</item>
+        <item name="chi" type="string">18 Chilton Hall</item>
+        <item name="esc" type="string">19 Eagle Student Center</item>
+        <item name="env" type="string">20 Environmental Science</item>
+        <item name="gate" type="string">21 Gateway Center</item>
+        <item name="matt" type="string">22 Matthews Hall</item>
+        <item name="mcc" type="string">23 McConnell Hall</item>
+        <item name="musb" type="string">24 Music Building</item>
+        <item name="musp" type="string">25 Music Practice Rooms</item>
+        <item name="peb" type="string">26 Physical Education Building</item>
+        <item name="uni" type="string">27 Union</item>
+        <item name="woo" type="string">28 Wooten Hall</item>
+    </string-array>
+</resources>
