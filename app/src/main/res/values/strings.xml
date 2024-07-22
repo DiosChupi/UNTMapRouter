@@ -19,11 +19,17 @@
         popular intersections that existing students use to travel across the campus. With this graph we then use our algorithm to find the shortest path between
         two locations specified by the users. Taking the graphs solution, we translate it into a digestible and familiar output for users to follow step by step.\n\n
 
-        \tVersion 1.0:\n\n
+        \tVersion 1.0.0:\n\n
         \t-Allows users to look up locations and get a route to each.\n
         \t-Does not have GPS capability.\n
         \t-Operates only on a small section of the main university.\n
         \t-Algorithm is based off of Depth First Search.\n\n
+
+        \tVersion 1.0.1:\n\n
+        \t-Expanded Map Routes\n
+        \t-Improve Algorithm used to find shortest path.\n
+        \t-Improve App Layout to accommodate new map expansion.\n
+        \t-Added distance and time to routes.\n\n
 
         \tProgrammers:\n\n
         \t\tTrung Du: Asian Wizard, enchanting users and teammates with his coding knowledge\n\n
